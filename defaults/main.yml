@@ -1,0 +1,13 @@
+---
+# defaults file for resolv
+
+resolv_domain: example.com
+
+resolv_search:
+  - example.com
+
+resolv_nameserver:
+  - 127.0.0.1
+
+resolv_sortlist: []
+resolv_options: []
