@@ -1,10 +1,9 @@
 ---
 # defaults file for resolv
 
-resolv_domain: example.com
+resolv_domain: ''
 
-resolv_search:
-  - example.com
+resolv_search: []
 
 resolv_nameserver:
   - 127.0.0.1
