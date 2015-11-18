@@ -5,3 +5,6 @@
   tags: 
     - resolv
     - config
+
+# setup local facts
+- include: facts.yml
