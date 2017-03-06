@@ -1,0 +1,14 @@
+mage: hudecof/ansible-tests:latest
+
+before_script:
+ - pip install -U setuptools
+ - pip install wheel
+ - pip install ansible==2.2.1.0
+ - pip install docker-py
+ - pip install molecule
+
+test:
+  script:
+    - cd ../ && mv  role-resolv hudecof.resolv && cd hudecof.resolv
+    - molecule test
+    - cd ../ && mv  hudecof.resolv role-resolv && cd role-resolv
