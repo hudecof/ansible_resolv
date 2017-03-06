@@ -9,6 +9,8 @@ before_script:
 
 test:
   script:
+    - pwd
     - cd ../ && mv  role-resolv hudecof.resolv && cd hudecof.resolv
+    - pwd
     - molecule test
     - cd ../ && mv  hudecof.resolv role-resolv && cd role-resolv
