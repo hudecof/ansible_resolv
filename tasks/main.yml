@@ -1,10 +1,7 @@
 ---
-# tasks file for resolv
-- name: "setup resolv.conf"
-  action: template src=resolv.conf.j2 dest=/etc/resolv.conf owner=root group=root mode=0644
-  tags: 
-    - resolv
-    - config
+
+# write /etc/resolv.conf
+- include: config.yml
 
 # setup local facts
 - include: facts.yml

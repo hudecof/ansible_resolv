@@ -1,12 +1,16 @@
 ---
 # defaults file for resolv
 
-resolv_domain: ''
+resolv_file: /etc/resolv.conf
+
+resolv_domain: null
 
 resolv_search: []
 
 resolv_nameserver:
-  - 127.0.0.1
+  - 8.8.8.8
+  - 8.8.4.4
 
 resolv_sortlist: []
-resolv_options: []
+resolv_options:
+  - rotate

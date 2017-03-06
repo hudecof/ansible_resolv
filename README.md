@@ -1,22 +1,24 @@
-resolv
-========
+# resolv
 
-This roles enables users to configure the /etc/resolv.conf
+This roles enables users to configure the /etc/resolv.conf. It will write also ansible facts file into ``/etc/ansible/facts.d/resolv.fact``
 
-Requirements
-------------
 
-None
+## Requirements
 
-Role Variables
---------------
+- ansible: 1.4
 
-Please read the descriptions in
+## Role Variables
 
-- defaults/main.yml
+See ``man resolv.conf`` for more informations.
 
-Dependencies
-------------
+- `resolv_file`: points to **/etc/resolv.conf**. Do not change until you know what are you doing.
+- `resolv_domain`: **domain** in */etc/resolv.conf*, default is **null**
+- `resolv_search`: **search** in */etc/resolv.conf*, default is **empty list**
+- `resolv_nameserver`: **nameserver** in */etc/resolv.conf*, default is **Google Public DNS service**
+- `resolv_sortlist`: **sortlist** in */etc/resolv.conf*, default is **empty list**
+- ``resolv_options``: **options** in */etc/resolv.conf*, default is **[rotate]**
+
+## Dependencies
 
 None
 
@@ -29,3 +31,5 @@ Author Information
 ------------------
 
 Peter Hudec
+CNC, a.s.
+Slovakia
