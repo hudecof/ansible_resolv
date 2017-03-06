@@ -1,4 +1,4 @@
-mage: hudecof/ansible-tests:latest
+image: hudecof/ansible-tests:latest
 
 before_script:
  - pip install -U setuptools
