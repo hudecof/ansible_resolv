@@ -5,7 +5,7 @@ before_script:
  - pip install wheel
  - pip install ansible==2.2.1.0
  - pip install docker-py
- - pip install molecule
+ - pip install molecule==1.20.3
 
 test:
   script:
