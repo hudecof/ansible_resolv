@@ -1,0 +1,5 @@
+---
+
+__resolv_packages:
+  - {'name': 'resolvconf', 'state': 'absent'}
+  - {'name': 'openresolv', 'state': 'absent'}

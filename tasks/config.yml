@@ -1,7 +1,9 @@
 ---
 
 - name: "setup resolv.conf"
-  action: template src=resolv.conf.j2 dest={{ resolv_file}} owner=root group=root mode=0644
-  tags:
-    - resolv
-    - resolv:config
+  template:
+    src: resolv.conf.j2
+    dest: "{{ resolv_file}}"
+    owner: root
+    group: root
+    mode: 0644

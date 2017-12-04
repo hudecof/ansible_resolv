@@ -1,7 +1,33 @@
 ---
 
-# write /etc/resolv.conf
-- include: config.yml
+- name: "common | set os specific variables"
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "os-{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml"
+    - "os-{{ ansible_distribution }}-{{ ansible_distribution_version }}.yml"
+    - "os-{{ ansible_distribution }}-{{ ansible_distribution_major_version }}.yml"
+    - "os-{{ ansible_distribution }}.yml"
+    - "os-{{ ansible_os_family }}.yml"
+  tags:
+    - resolv
+    - resolv:package
+    - resolv:config
+    - resolv:facts
 
-# setup local facts
-- include: facts.yml
+- name: include package tasks
+  include: packages-{{ ansible_os_family }}.yml
+  tags:
+    - resolv
+    - resolv:package
+
+- name: include config tasks
+  include: config.yml
+  tags:
+    - resolv
+    - resolv:config
+
+- name: include facts tasks
+  include: facts.yml
+  tags:
+    - resolv
+    - resolv:facts

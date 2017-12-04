@@ -1,6 +1,8 @@
 ---
 # defaults file for resolv
 
+resolv_packages: "{{ __resolv_packages }}"
+
 resolv_file: /etc/resolv.conf
 
 resolv_domain: null
