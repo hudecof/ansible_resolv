@@ -1,6 +1,5 @@
 # resolv
 
-- CNC: [![build status](https://source.cnc.sk/ansible/role-resolv/badges/master/build.svg)](https://source.cnc.sk/ansible/role-resolv/commits/master)
 - GitHub: [![Build Status](https://travis-ci.org/hudecof/ansible_resolv.svg?branch=master)](https://travis-ci.org/hudecof/ansible_resolv)
 
 This roles enables users to configure the /etc/resolv.conf. It will write also ansible facts file into ``/etc/ansible/facts.d/resolv.fact``
@@ -32,14 +31,10 @@ None
         - role: hudecof.resolv
 
 
-License
--------
+## License
 
 BSD
 
-Author Information
-------------------
+## Author Information
 
 Peter Hudec
-CNC, a.s.
-Slovakia
