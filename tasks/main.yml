@@ -9,10 +9,7 @@
     - "os-{{ ansible_distribution }}.yml"
     - "os-{{ ansible_os_family }}.yml"
   tags:
-    - resolv
-    - resolv:package
-    - resolv:config
-    - resolv:facts
+    - always
 
 - name: include package tasks
   include: packages-{{ ansible_os_family }}.yml
