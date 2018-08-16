@@ -2,7 +2,6 @@
 galaxy_info:
   author: Peter Hudec
   description: role for setting /etc/resolv.conf
-  company: CNC, a.s.
   license: BSD
   min_ansible_version: 1.4
 
@@ -28,7 +27,7 @@ galaxy_info:
   - name: Debian
     versions:
     - all
-  categories:
+  galaxy_tags:
   - system
 
 dependencies: []
