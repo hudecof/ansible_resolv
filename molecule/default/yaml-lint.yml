@@ -10,3 +10,4 @@ rules:
     spaces: consistent
     indent-sequences: whatever
     check-multi-line-strings: true
+  truthy: disable
